@@ -34,7 +34,7 @@ function generateES5Code(code, fileType) {
             (($context) => {
                 try{
                     ${code};
-                    // return excute(context);
+                    return $excute(context);
                 }catch(e){
                   $context && $context.reportError && $context.reportError("CallRunTimeCoreError: " + e.stack) 
                     return null;

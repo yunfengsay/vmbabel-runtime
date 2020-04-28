@@ -29,7 +29,7 @@ function generateES5Code(code, fileType) {
             ],
         ],
     }).code;
-    regeneratedCode = "\n            'use strict';\n            (($context) => {\n                try{\n                    " + code + ";\n                    // return excute(context);\n                }catch(e){\n                  $context && $context.reportError && $context.reportError(\"CallRunTimeCoreError: \" + e.stack) \n                    return null;\n                }\n            })(context)\n         ";
+    regeneratedCode = "\n            'use strict';\n            (($context) => {\n                try{\n                    " + code + ";\n                    return $excute(context);\n                }catch(e){\n                  $context && $context.reportError && $context.reportError(\"CallRunTimeCoreError: \" + e.stack) \n                    return null;\n                }\n            })(context)\n         ";
     return regeneratedCode;
 }
 function excute(params) {
